@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -11,6 +10,7 @@ public class Main {
         }
 
         List<Thread> threads = new ArrayList<>();
+
         long startTs = System.currentTimeMillis();
         for (String text : texts) {
             Thread thread = new Thread(() -> {
@@ -44,7 +44,6 @@ public class Main {
 
         long endTs = System.currentTimeMillis();
         System.out.println("Time: " + (endTs - startTs) + " ms");
-
     }
 
     private static String generateText(String letters, int length) {
@@ -55,5 +54,4 @@ public class Main {
         }
         return text.toString();
     }
-
 }
